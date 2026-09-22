@@ -1,0 +1,28 @@
+name: Currency Converter CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check HTML file
+        run: |
+          test -f index.html
+          grep -q "</html>" index.html
+
+      - name: Check JavaScript folder
+        run: test -d js
+
+      - name: Check CSS folder
+        run: test -d css
+
+      - name: CI Test Passed
+        run: echo "Currency Converter CI test passed successfully."
