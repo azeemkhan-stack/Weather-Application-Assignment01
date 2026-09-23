@@ -1,28 +1,27 @@
-name: Currency Converter CI
+name: Weather Application CI
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-  test:
+  test-and-build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Check HTML file
-        run: |
-          test -f index.html
-          grep -q "</html>" index.html
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
 
-      - name: Check JavaScript folder
-        run: test -d js
+      - name: Run automated tests
+        run: npm test
 
-      - name: Check CSS folder
-        run: test -d css
-
-      - name: CI Test Passed
-        run: echo "Currency Converter CI test passed successfully."
+      - name: Run static build check
+        run: npm run build
