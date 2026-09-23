@@ -1,0 +1,11 @@
+{
+  "name": "skycast-weather-application",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive weather information dashboard using Open-Meteo APIs.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/check-static.mjs"
+  }
+}
