@@ -2,6 +2,11 @@
 
 ## Build and Deploy a Small Application
 
+**Student Name:** Azeem Khan  
+**Class:** BCS-3B  
+**Roll Number:** 062  
+**Suggested submission filename:** `AzeemKhan_062_SEAss01.pdf`
+
 **Application:** SkyCast Weather Application  
 **Technology:** HTML, CSS, JavaScript, GitHub Actions  
 **Repository:** [Weather-Application-Assignment01](https://github.com/azeemkhan-stack/Weather-Application-Assignment01)  
